@@ -3,7 +3,11 @@
 using System;
 using System.Linq;
 
+#if HAS_UNO_WINUI
+namespace Microsoft.UI.Input;
+#else
 namespace Windows.UI.Input;
+#endif
 
 internal static class PointerPointPropertiesExtensions
 {
